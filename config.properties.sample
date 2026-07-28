@@ -1,0 +1,37 @@
+# ServiceNow File Uploader Configuration
+# 
+# This file contains the configuration for the ServiceNow File Uploader.
+# Uncomment and fill in the values below with your specific information.
+#
+# Usage: ./run.sh --config
+#
+
+# Path to the CSV file to upload
+FILE_PATH=./employee_data.csv
+
+# ServiceNow instance endpoint (without https://)
+ENDPOINT=instance.service-now.com
+
+# API query string/endpoint
+QUERY_STRING=/api/now/table/x_snc_file_ingest_employee
+
+# OAuth Client ID
+CLIENT_ID=your_client_id_here
+
+# OAuth Client Secret
+CLIENT_SECRET=your_client_secret_here
+
+# Refresh Token (optional - leave empty if obtaining new token via username/password)
+REFRESH_TOKEN=
+
+# Refresh Token Flag (set to 'true' if you already have a valid refresh token above)
+REFRESH_TOKEN_FLAG=false
+
+# ServiceNow username (used to obtain refresh token if REFRESH_TOKEN is empty)
+USERNAME=your_username_here
+
+# ServiceNow password (used to obtain refresh token if REFRESH_TOKEN is empty)
+PASSWORD=your_password_here
+
+# Delete CSV file after successful upload?
+DELETE_FILE_FLAG=false
